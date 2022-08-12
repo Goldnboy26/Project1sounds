@@ -6,11 +6,15 @@
 }
 
 html {
-    background-color: #212121;
+  /* background gradient */
+    background: #171718;
+    background: -webkit-linear-gradient(top left, #171718, #373536);
+    background: -moz-linear-gradient(top left, #171718, #373536);
+    background: linear-gradient(to bottom right, #171718, #373536);
     font-size: .8em;
 }
 
-
+/* SIDEBAR CSS */
 .app {
     display: flex;
     min-height: 100vh;
@@ -19,8 +23,8 @@ html {
 .menu-toggle {
 	display: none;
 	position: fixed;
-	top: 2rem;
-	
+	top: 1rem;
+  left: .5rem;
 	width: 60px;
 	height: 60px;
 	border-radius: 99px;
@@ -107,7 +111,6 @@ html {
     color: #3bba9c;
 }
 
-
 i {
     padding-right: .5em;
 }
@@ -146,3 +149,4 @@ i {
     padding-right: .5em;
 }
 
+/* END NAV BAR */
