@@ -12,12 +12,14 @@
 </head>
 <body>
 
+<header>
+  <button id="searchTermBtn">Search</button>
+</header>
 
     <!--this is the search bar-->
     <form action="">
-        <input type="search" required>
+        <input type="search" id="searchTerm" required>
         <i class="fa fa-search"></i>
-        <a href="javascript:void(0)" id="clear-btn"></a>
       </form>
 <div class="card bg-dark text-white">
         <img src="images/background.png" class="card-img" alt="background">
@@ -26,9 +28,11 @@
         </div>
       </div>
 
-    
+      <div id="songs">
+      </div>
 
-
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="./assets/js/script.js"></script>
     
 </body>
 </html>
