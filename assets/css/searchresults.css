@@ -1,0 +1,20 @@
+html {
+    background-color: #4D4A4F;
+}
+
+span {
+    color: white;
+}
+
+#aside {
+    background-color: grey;
+}
+
+.styledmenu {
+    background-color: black; 
+    height: 100vh;
+}
+
+i {
+    padding: 10px;
+}
