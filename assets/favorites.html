@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./css/favorites.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <!--hamburger for mobile-->
+    <div class="app">
+		<div class="menu-toggle">
+			<div class="hamburger">
+				<span></span>
+			</div>
+		</div>
+
+        <!-- Sidebar -->
+		<aside class="sidebar">
+			<h3>Menu</h3>
+			<nav class="menu">
+				<a href="../index.html" class="menu-item"><i class="fa fa-search"></i>Search</a>
+				<a href="#" class="menu-item is-active"><i class="fa fa-star"></i>Favorites</a>
+				<a href="#" class="menu-item"><i class="fa fa-calendar-check"></i>Log in</a>
+			</nav>
+		</aside>
+		<main class="content">
+			<h1>Welcome, Human</h1>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, explicabo!</p>
+		</main>
+	</div>
+
+    <!-- sidebar toggle script-->
+    <script>
+		const menu_toggle = document.querySelector('.menu-toggle');
+		const sidebar = document.querySelector('.sidebar');
+
+		menu_toggle.addEventListener('click', () => {
+			menu_toggle.classList.toggle('is-active');
+			sidebar.classList.toggle('is-active');
+		});
+	</script>
+
+<script src="./js/script.js"></script>
+</body>
+</html>
+
+
+
