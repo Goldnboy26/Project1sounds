@@ -23,8 +23,8 @@ html {
 .menu-toggle {
 	display: none;
 	position: fixed;
-	top: 1rem;
-  left: .5rem;
+	top: 2rem;
+	right: 2rem;
 	width: 60px;
 	height: 60px;
 	border-radius: 99px;
@@ -145,8 +145,5 @@ i {
 
 }
 
-i {
-    padding-right: .5em;
-}
 
 /* END NAV BAR */

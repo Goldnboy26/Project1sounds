@@ -17,7 +17,13 @@ body {
     margin: 0;
     height: 100vh;
     width: 100%;
-    background: #07051a;
+    box-sizing: border-box;
+    /*background gradient*/
+    background: #171718;
+    background: -webkit-linear-gradient(top left, #171718, #373536);
+    background: -moz-linear-gradient(top left, #171718, #373536);
+    background: linear-gradient(to bottom right, #171718, #373536);
+    font-size: .8em;
 }
 
 form{
@@ -100,3 +106,39 @@ form:valid a {
   display: block;
 }
     /*end ofsearch bar*/
+
+
+    
+    /* Song card CSS */
+
+    main {
+        position: relative;
+        padding: 50px 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    main article {
+        width: calc(100% / 5 - 5px);
+        border-radius: 3px;
+        margin-bottom: 25px;
+        background: #f1f3f4;
+    }
+    
+    main article img {
+        width: 50%;
+        height: 250px;
+        object-fit: cover;
+    }
+    
+    main article p,
+    main article h4,
+    main article audio {
+        padding: 0 5px;
+    }
+    
+    main article audio {
+        width: 100%;
+    }
+                 
