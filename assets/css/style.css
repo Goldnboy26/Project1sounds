@@ -69,6 +69,9 @@ input{
     text-align: center;
     font-size: 1.2em;
     transition: all 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 form:hover,
