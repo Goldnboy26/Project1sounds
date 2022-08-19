@@ -24,16 +24,97 @@
 			<nav class="menu">
 				<a href="../index.html" class="menu-item"><i class="fa fa-search"></i>Search</a>
 				<a href="#" class="menu-item is-active"><i class="fa fa-star"></i>Favorites</a>
-				<a href="#" class="menu-item"><i class="fa fa-calendar-check"></i>Log in</a>
+				<a href="#" class="menu-item js-modal-trigger" id="register" data-target="modal-js-example"><i class="fa fa-calendar-check"></i>Sign Up</a>
 			</nav>
 		</aside>
 		<main class="content">
-			<h1>Welcome, Human</h1>
-			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, explicabo!</p>
+			<h1>Favorite Songs</h1>
+
+
+			
+				<!-- Modal -->
+				<div id="modal-js-example" class="modal">
+					<div class="modal-card">
+					  <header class="modal-card-head">
+						<p class="modal-card-title">Create Your Account</p>
+						<button class="delete" aria-label="close"></button>
+					  </header>
+					  <section class="modal-card-body">
+
+						<div class="field">
+							<label class="label">Email:</label>
+							<div class="control has-icons-left has-icons-right">
+							  <input class="input" type="email" placeholder="Email">
+							  <span class="icon is-small is-left">
+								<i class="fas fa-envelope"></i>
+							  </span>
+							  <!--<span class="icon is-small is-right">
+								<i class="fas fa-exclamation-triangle"></i>
+							  </span>-->
+
+
+							  <div class="field">
+								<label class="label">Username:</label>
+								<div class="control has-icons-left has-icons-right">
+								  <input class="input" type="text" placeholder="Username">
+								  <span class="icon is-small is-left">
+									<i class="fas fa-user"></i>
+								  </span>
+								  <!--<span class="icon is-small is-right">
+									<i class="fas fa-check"></i>
+								  </span>
+								</div>
+								<p class="help">This username is available</p>
+							  </div>-->
+
+							  <div class="field">
+								<label class="label">Password:</label>
+								<div class="control has-icons-left has-icons-right">
+								  <input class="input" type="password" placeholder="Password">
+
+						<div class="field">
+							<label class="label">Name:</label>
+							<div class="control">
+							  <input class="input" type="text" placeholder="Name">
+							</div>
+						  </div>
+						  
+						  <div class="field">
+							<label class="label">Create a Bio:</label>
+							<div class="control">
+							  <textarea class="textarea" placeholder="....."></textarea>
+							</div>
+						  </div>
+						  
+						  <div class="field">
+							<div class="control">
+							  <label class="checkbox">
+								<input type="checkbox">
+								<a href="#">I agree to the terms and conditions</a>
+							  </label>
+							</div>
+						  </div>
+
+					  </section>
+					  <footer class="modal-card-foot">
+						<button class="button is-success">Save changes</button>
+						<button class="button">Cancel</button>
+					  </footer>
+					</div>
+				  </div>
+			  
+				
+
+			  <!-- end modal content -->
+
+
 		</main>
 	</div>
 
-    <!-- sidebar toggle script-->
+	
+
+
+    <!--sidebar toggle script-->
     <script>
 		const menu_toggle = document.querySelector('.menu-toggle');
 		const sidebar = document.querySelector('.sidebar');
@@ -42,6 +123,53 @@
 			menu_toggle.classList.toggle('is-active');
 			sidebar.classList.toggle('is-active');
 		});
+
+
+
+ 			//modal function
+		let button = document.getElementById("register");
+
+		document.addEventListener('DOMContentLoaded', () => {
+  
+function openModal($el) {
+  $el.classList.add('is-active');
+}
+
+function closeModal($el) {
+  $el.classList.remove('is-active');
+}
+
+function closeAllModals() {
+  (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+	closeModal($modal);
+  });
+}
+
+(document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+  const modal = $trigger.dataset.target;
+  const $target = document.getElementById(modal);
+
+  button.addEventListener('click', () => {
+	openModal($target);
+  });
+});
+
+(document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+  const $target = $close.closest('.modal');
+
+  $close.addEventListener('click', () => {
+	closeModal($target);
+  });
+});
+
+document.addEventListener('keydown', (event) => {
+  const e = event || window.event;
+
+  if (e.keyCode === 27) {
+	closeAllModals();
+  }
+});
+});
 	</script>
 
 <script src="./js/script.js"></script>
