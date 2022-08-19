@@ -5,6 +5,123 @@
     box-sizing: border-box;
 }
 
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://i.postimg.cc/sX9mn9VF/gradientbackground.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px 8% 0 8%;
+    cursor: pointer;
+}
+
+h1 {
+    color: white;
+}
+
+.butts:hover {
+    border-bottom: 2px solid white;
+    padding: 5px;
+    transition: all ease 1s;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    color: white;
+}
+
+.nav ul li { 
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 50px;
+}
+
+.nav ul li :hover {
+    transition: .5s;
+    cursor: pointer;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn {
+    color: white;
+    border: 3px solid white;
+    border-radius: 30px;
+    padding: 10px 25px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: white;
+    border: transparent;
+    transition: .5s;
+    color: #1e1e1e;
+}
+
+.intro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 19%;
+    
+}
+
+.intro p {
+    color: #1e1e1e;
+    font-size: 30px;
+}
+
+h2 {
+    color: white;
+    font-size: 70px;
+    margin: 20px 0px 20px;
+}
+
+.stay {
+    position: fixed;
+}
+
+#home-btn {
+    background: #1e1e1e;
+    border: 1px solid #1e1e1e;
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+    display: flex;
+    position: relative;
+    left: 94%;
+    top: 12%;
+}
+
+.home {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    position: relative;
+    top: 7%;
+    left: 7%;
+}
+
 /*search bar*/
 #card-img {
 height: 100%;
@@ -14,18 +131,10 @@ background-size: cover;
 }
 
 body {
-    margin-top: auto;
-    padding: 0;
-    margin: 0;
     height: 100vh;
     width: 100%;
     box-sizing: border-box;
-    /*background gradient*/
-    background: #171718;
-    background: -webkit-linear-gradient(top left, #171718, #373536);
-    background: -moz-linear-gradient(top left, #171718, #373536);
-    background: linear-gradient(to bottom right, #171718, #373536);
-    font-size: .8em;
+    background: #1e1e1e;
 }
 
 form{
@@ -89,23 +198,11 @@ form:valid input{
 
 form:hover .fa,
 form:valid .fa{
-    background: #07051a;
+    background: #1e1e1e;
     color: white;
 }
 
 
-a {
-  display: none;
-  position: absolute;
-  top: 70px;
-  bottom:0;
-  left: 0;
-  right: 0;
-  font-size: 20px;
-  color: white;
-  text-align: center; 
-  width: 100%;
-}
 
 form:valid a {
   display: block;

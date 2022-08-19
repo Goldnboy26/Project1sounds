@@ -1,51 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
     crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./images/Vinyl Logo2.ico">
     <link rel="stylesheet" href="./assets/css/style.css" />
- <title>Document</title>
-</head>
-<body>
-  <div class="hero" id="home">
-    <nav class="nav">
-        <h1 class="logo"></h1>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#me">Search</a></li>
-            <li><a href="#projects">Librariy</a></li>
-        </ul>
-        <a href="#contact" class="btn">Login</a>
-    </nav>
-    <div class="intro">
-       <!-- message -->
-    </div>
-</div>
-    <!--this is the search bar-->
+    <title>Vinyl</title>
+  </head>
 
-<div class="searchbar">
-    <form action="" onSubmit="return false;">
-        <input type="search" id="searchTerm" placeholder="Artists, songs" required>
-        <i class="fa fa-search" id="searchTermBtn"></i>
-      </form>
-    </div>
-<div class="card bg-dark text-white">
-        <!--<img src="images/background.png" class="card-img" alt="background">-->
-        <div class="card-img-overlay">
-        </div>
-        </div>
+  <body>
+    <div class="hero">
+      <nav class="nav">
+          <div class="logo-text"><img src="./images/whiteLogoo.ico" class="logo">Vinyl</div>
+          <ul>
+              <li><a href="#" class="butts">Home</a></li>
+              <li><a href="#" class="butts">Search</a></li>
+              <li><a href="#"class=butts>Librariy</a></li>
+          </ul>
+          <a href="#" class="btn">Login</a>
+      </nav>
+
+      <div class="intro">
+        <p>find new music<p>
+        <h2>EXPERIENCES</h2>
+        <p>make new</p>
       </div>
 
-      <main id="songs">
+      <div class="search-bar">
+        <form action="" onSubmit="return false;">
+          <input type="search" id="searchTerm" placeholder="Artists, Songs, Albums" required>
+          <i class="fa fa-search" id="searchTermBtn"></i>
+        </form>
+      </div>
+      
+      <div id="home-btn">
+        <img src="./images/Vinyl Logo2.ico" class="home">
+      </div>
+    </div>
+      <!--this is the search bar-->
+    <div class="card bg-dark text-white">
+          <!--<img src="images/background.png" class="card-img" alt="background">-->
+          <div class="card-img-overlay">
+          </div>
+        </div>
 
-      </main>
+        <main id="songs">
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="./assets/js/script.js"></script>
-    
-</body>
+        </main>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+      
+  </body>
 </html>
