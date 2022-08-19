@@ -218,89 +218,89 @@ form:valid a {
 
 
     /* Heart Icon */
-    .test {
-        float: right;
-        position: relative;
-        height: 15px;
-        width: 15px;
-        background: #c9c9c9;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        border-radius: 0 0 0 10px;
-        transform: rotate(-45deg);
-        margin: 15px;
+    :root {
+        --grey: #ccc;
+        --magenta: #f06;
     }
-
-.test.fill-color {
-    background-color: #ff2727;
-
-}
-
-
-
-    .test:before {
-        position: absolute;
-        content: '';
-        top: -50%;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: inherit;
-        border-radius: 50%;
-    }
-
-    .test:after {
-        position: absolute;
-        content: '';
-        right: -50%;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: inherit;
-        border-radius: 50%;
-    }
-
-    .animation-test {
-        position: absolute;
+    
+    #container {
+    
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100px;
-        height: 100px;
-        background: #ff2727;
-        transform: rotate(-45deg);
-        border-radius: 0 0 0 10px;
+    }
+    
+    #heart {
+        width: 40px;
+        height: 40px;
+        stroke: var(--magenta);
+        fill: var(--grey);
+        stroke-dasharray: 54;
+        stroke-dashoffset: 54;
+        float: right;
+    }
+    
+    #heart:hover {
         cursor: pointer;
-        visibility: hidden;
     }
-
-    .animation-test::after {
-        position: absolute;
-        content: '';
-        height: 100%;
-        width: 100%;
-        top: -50%;
-        right: 0;
-        background: inherit;
-        border-radius: 50%;
+    
+    #heart.like {
+        animation: 0.8s ease-in forwards like,
+        0.8s linear 1s 2 forwards beat;
     }
-
-    .animation-test::before {
-        position: absolute;
-        content: '';
-        height: 100%;
-        width: 100%;
-        top: 0;
-        right: -50%;
-        background: inherit;
-        border-radius: 50%;
-
+    
+    #heart.unlike {
+        animation: 0.8s ease-out forwards unlike;
     }
-
-    @keyframes popup {
-        100% {
-            transform: scale(1.5) rotate(-45deg);
-            opacity: 0;
+    
+    @keyframes like {
+        0% {
+            stroke-dashoffset: 54;
+            fill: var(--grey);
         }
+    
+        70% {
+            stroke-dashoffset: 0;
+            fill: var(--grey);
+        }
+    
+        100% {
+            stroke-dashoffset: 0;
+            fill: var(--magenta);
+        }
+    
     }
+    
+    @keyframes unlike {
+        0% {
+            stroke-dashoffset: 0;
+            fill: var(--magenta);
+        }
+    
+        70% {
+            stroke-dashoffset: 0;
+            fill: var(--grey);
+        }
+    
+        100% {
+            stroke-dashoffset: 54;
+            fill: var(--grey);
+        }
+    
+    }
+    
+    @keyframes beat {
+        0% {
+          transform: scale(1, 1);
+        }
+      
+        50% {
+          transform: scale(0.9, 0.9);
+        }
+      
+        100% {
+          transform: scale(1, 1);
+        }
+      
+      }
+    
