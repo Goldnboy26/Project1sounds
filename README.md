@@ -6,10 +6,12 @@ So then every time the user would look for the artist name all their songs would
 The website basically has an API link from apple itunes that is collecting the data of every artist which is an external storage. 
 finally, there is a navbar that can help display some extra content on the in order to guide the custumer during their experience in the page. 
 
-User story
+USER STORY
+
 As a user I want to search for song titles 
 WHEN I search a title THEN I am prompted with related songs 
 WHEN I favorite a song THEN that song will be saved to local storage 
 WHEN I click register THEN I am prompted with a user creation modal
 
-file:///Users/eduardomonjevasquez/Project1/P1sounds/index.html#
+<img width="1440" alt="vinyl" src="https://user-images.githubusercontent.com/106297412/185532111-273f94db-ce1a-46dd-96ec-afcff9d76039.png">
+
