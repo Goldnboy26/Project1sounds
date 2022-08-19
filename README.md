@@ -1,3 +1,5 @@
+P1SOUNDS VINYL
+
 During the project 1 sounds the team did work on using bulma in replacement of bootstrap, that help out with the display of the page. 
 Putting toguether the images with the help of Lucas who custom made them, and added them to the display of the page. 
 The images are currently displaying from a local storage without the need of an external one.
