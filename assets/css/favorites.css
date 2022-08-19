@@ -108,7 +108,8 @@ html {
 }
 
 .content > h1 {
-    color: #3bba9c;
+    color: #ffffff;
+    font-size: 4em;
 }
 
 i {
@@ -145,5 +146,12 @@ i {
 
 }
 
-
 /* END NAV BAR */
+
+label {
+  padding-top: 20px;
+}
+
+.modal-card {
+background-color: #181818;
+}
