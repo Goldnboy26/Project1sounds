@@ -18,6 +18,10 @@ WHEN I favorite a song THEN that song will be saved to local storage.
 
 WHEN I click register THEN I am prompted with a user creation modal.
 
-<img width="1440" alt="vinyl" src="https://user-images.githubusercontent.com/106297412/185532111-273f94db-ce1a-46dd-96ec-afcff9d76039.png">
 
  
+<img width="1440" alt="Screen Shot 2022-08-21 at 9 05 21 PM" src="https://user-images.githubusercontent.com/106297412/185837827-8eb39917-652c-43ea-ab90-51aaef1c10d7.png">
+
+Here is a great example of the functionality of the website, where you can like a song, doanwload it, or playback speed. 
+
+<img width="1440" alt="Screen Shot 2022-08-21 at 9 07 19 PM" src="https://user-images.githubusercontent.com/106297412/185837839-9275bc28-843c-4cd2-8a25-c304f6e37e39.png">
