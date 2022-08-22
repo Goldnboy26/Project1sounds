@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
     crossorigin="anonymous">
@@ -14,16 +15,21 @@
   </head>
 
   <body>
+
+    <!-- top nav bar -->
+
     <div class="hero">
       <nav class="nav">
           <div class="logo-text"><img src="./images/whiteLogoo.ico" class="logo">Vinyl</div>
           <ul>
-              <li><a href="#" class="butts">Home</a></li>
+              <li><a href="./index.html" class="butts">Home</a></li>
               <li><a href="#" class="butts">Search</a></li>
-              <li><a href="#"class=butts>Favorites</a></li>
+              <li><a href="./assets/favorites.html"class=butts>Favorites</a></li>
           </ul>
-          <a href="#" class="btn">Sign up</a>
+          <a href="#" id="register" class="btn js-modal-trigger" data-target="modal-js-example">Sign up</a>
       </nav>
+
+      <!-- center text -->
 
       <div class="intro">
         <p>find new music<p>
@@ -31,25 +37,128 @@
         <p>make new</p>
       </div>
 
+      <!-- search bar -->
+
       <div class="search-bar">
         <form action="" onSubmit="return false;">
           <input type="search" id="searchTerm" placeholder="Artists, Songs, Albums" required>
           <i class="fa fa-search" id="searchTermBtn"></i>
         </form>
       </div>
-      
-      
+        
     </div>
-      <!--this is the search bar-->
-    <div class="card bg-dark text-white">
-          <!--<img src="images/background.png" class="card-img" alt="background">-->
-          <div class="card-img-overlay">
+     
+    <!------ account creation modal ----->
+
+    <div id="modal-js-example" class="modal">
+      <div class="modal-card">
+        <header class="modal-card-head">
+        <p class="modal-card-title">Create Your Account</p>
+        <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+
+        <div class="field">
+          <label class="label">Email:</label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input" type="email" id="email" placeholder="Email">
+            <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+            </span>
+
+            <div class="field">
+            <label class="label">Username:</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input" type="text" id="username" placeholder="Username">
+              <span class="icon is-small is-left">
+              <i class="fas fa-user"></i>
+              </span>
+
+            <div class="field">
+            <label class="label">Password:</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input" type="password" id="password" placeholder="Password">
+          
+          <div class="field">
+          <label class="label">Create a Bio:</label>
+          <div class="control">
+            <textarea class="textarea" id="bio" placeholder="....."></textarea>
           </div>
-        </div>
+          </div>
+          
+          <div class="field">
+          <div class="control">
+            <label class="checkbox">
+            <input type="checkbox">
+            <a href="#">I agree to the terms and conditions</a>
+            </label>
+          </div>
+          </div>
+
+        </section>
+        <footer class="modal-card-foot">
+        <button class="button is-success" id="savebtn">Save changes</button>
+        <button class="button">Cancel</button>
+        </footer>
+      </div>
+      </div>
+      <!-- end modal -->
+
+
+      <!-- songs go here -->
 
         <main id="songs">
-
         </main>
+
+
+        <!-- event listener script for modal -->
+        <script>
+          let button = document.getElementById("register");
+
+          document.addEventListener('DOMContentLoaded', () => {
+
+          function openModal($el) {
+          $el.classList.add('is-active');
+          }
+
+          function closeModal($el) {
+          $el.classList.remove('is-active');
+          }
+
+          function closeAllModals() {
+          (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+          closeModal($modal);
+          });
+        }
+
+          (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+          const modal = $trigger.dataset.target;
+          const $target = document.getElementById(modal);
+
+          button.addEventListener('click', () => {
+          openModal($target);
+          });
+        });
+
+          (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+          const $target = $close.closest('.modal');
+
+          $close.addEventListener('click', () => {
+          closeModal($target);
+          });
+        });
+
+          document.addEventListener('keydown', (event) => {
+          const e = event || window.event;
+
+          if (e.keyCode === 27) {
+          closeAllModals();
+          }
+        });
+      });
+          </script>
+
+
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="./assets/js/script.js"></script>

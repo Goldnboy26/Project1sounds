@@ -13,12 +13,30 @@
     background-position: center;
 }
 
+#card-img {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    
+    body {
+        height: 100vh;
+        width: 100%;
+        box-sizing: border-box;
+        background: #1e1e1e;
+    }
+
+/* top header CSS */
+
 .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 45px 8% 0 8%;
     cursor: pointer;
+    font-size: 2em;
+    text-align: center;
 }
 
 h1 {
@@ -82,8 +100,7 @@ h1 {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 19%;
-    
+    right: 2%;
 }
 
 .intro p {
@@ -121,21 +138,9 @@ h2 {
     top: 7%;
     left: 7%;
 }
+/* end nav bar CSS */
 
-/*search bar*/
-#card-img {
-height: 100%;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-body {
-    height: 100vh;
-    width: 100%;
-    box-sizing: border-box;
-    background: #1e1e1e;
-}
+/* search bar */
 
 form{
     position: relative;
@@ -185,37 +190,36 @@ input{
     justify-content: center;
 }
 
-form:hover,
-form:valid{
-    width: 900px;
-    cursor: pointer;
-}
+    form:hover,
+    form:valid{
+        width: 900px;
+        cursor: pointer;
+    }
 
-form:hover input,
-form:valid input{
+    form:hover input,
+    form:valid input{
+        display: block;
+    }
+
+    form:hover .fa,
+    form:valid .fa{
+        background: #1e1e1e;
+        color: white;
+    }
+
+    form:valid a {
     display: block;
-}
-
-form:hover .fa,
-form:valid .fa{
-    background: #1e1e1e;
-    color: white;
-}
-
-
-
-form:valid a {
-  display: block;
-}
-    /*end ofsearch bar*/
-
+    }
+    /* end search bar */
 
 
     /* Song card CSS */
 
+    .songs {
+        display: none;
+    }
 
     .search-bar {
-
         position: relative;
         width: 100%;
         height: auto;
@@ -224,10 +228,9 @@ form:valid a {
         flex-direction: row;
         padding: 20px 0;
         padding-top: 15rem;
+        bottom: 35%;
+        right: 2%;
     }
-
-
-    
 
     main {
         position: relative;
@@ -243,8 +246,6 @@ form:valid a {
     }
     
     main article {
-       
-   
         width: 33%;
         border-radius: 3px;
         overflow: hidden;
@@ -262,43 +263,31 @@ form:valid a {
         box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px,
         rgb(255, 255, 255, 0.5) -3px -3px 6px 1px;
         border-radius: 3px;
-       
-
-  
-
-
-
-
-}
-    
+    }
     
     main article p {
         text-align: center;
         height: 5px;
         width: 73%;
-        margin: 6% auto;
-        
-        
-
+        margin: 6% auto;   
     }
+
     main article h4 {
         font-size: 1.15rem;
         font-weight: 400;
         color: rgb(0, 0, 0);
         text-align: center;
-        
-        
-
     }
 
-   
-    
     main article audio {
         overflow: hidden;
         width: 100%;
     }
+    /* end song card CSS */
 
-    /*mobile*/
+
+    /* mobile media query */
+
     @media (max-width: 768px) {
         
         nav {
@@ -309,6 +298,11 @@ form:valid a {
             align-items: center;
             flex-direction: row;
             padding: 20px 0;
+            
+        }
+
+        nav ul {
+            display: none;
         }
         
         main {
@@ -357,11 +351,28 @@ form:valid a {
             top: 14%;
         }
                 
-        
+        .intro {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            right: 2%;
+        }
+
+        .search-bar {
+            position: relative;
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            padding: 20px 0;
+            padding-top: 15rem;
+            bottom: 30%;
+            right: 2%;
+        }
     }
-
-
-
+    /* end mobile media query */
 
     /* Heart Icon */
     :root {
@@ -449,4 +460,5 @@ form:valid a {
         }
       
       }
+    /* end heart icon */
     

@@ -6,11 +6,8 @@
 }
 
 html {
-  /* background gradient */
-    background: #171718;
-    background: -webkit-linear-gradient(top left, #171718, #373536);
-    background: -moz-linear-gradient(top left, #171718, #373536);
-    background: linear-gradient(to bottom right, #171718, #373536);
+    height: 100vh;
+    width: 100vw;
     font-size: .8em;
 }
 
@@ -18,6 +15,21 @@ html {
 .app {
     display: flex;
     min-height: 100vh;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 20px;
+  color: white;
 }
 
 .menu-toggle {
@@ -93,18 +105,23 @@ html {
 
 .sidebar .menu .menu-item:hover,
 .sidebar .menu .menu-item.is-active {
-	color: #3bba9c;
-	border-right: 5px solid #3bba9c;
+	color: #FF6666;
+	border-right: 5px solid #FF6666;
 }
 
 .sidebar .menu .menu-item:hover {
-	border-right: 5px solid #3bba9c;
+	border-right: 5px solid #FF6666;
 }
 
 .content {
 	flex: 1 1 0;
 	padding: 2rem;
     color: #FFF;
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://i.postimg.cc/sX9mn9VF/gradientbackground.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .content > h1 {
